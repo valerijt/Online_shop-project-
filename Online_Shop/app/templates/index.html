@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Guitar shop</title>
+{% endblock %}
+
+{% block body %}
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Guitars</h1>
+      <p class="fs-5 text-muted"><font color="black">There is three different models legendary guitars for your choose</font></p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Telecaster</h4>
+          </div>
+          <div class="card-body">
+            <img src="https://images.musicstore.de/images/0960/fender-american-professional-nashville-telecaster-mn-butterscotch-blonde_1_GIT0048524-000.jpg" width="380" height="337">
+            <h1 class="card-title pricing-card-title">$1999</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Lacquer finish</li>
+              <li>Pure vintage ‘64 pickups</li>
+              <li>“MID-’60S C” neck shape</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary"><a href="/order">Buy now</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Les Paul</h4>
+          </div>
+          <div class="card-body">
+            <img src="https://www.muztorg.ru/files/e0s/8po/h09/bwc/oc4/cok/kkg/ks0/w/e0s8poh09bwcoc4cokkkgks0w.jpg" width="130" height="337">
+            <h1 class="card-title pricing-card-title">$1999</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Body material Mahogany</li>
+              <li>Two Humbucker pickups</li>
+              <li>2 Volumes, 2 Tones & Toggle Switch</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary"><a href="/order">Buy right now</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Stratocaster</h4>
+          </div>
+          <div class="card-body">
+            <img src="https://fender.ru/upload/iblock/e2c/A069264_d9ac4xeeixsk4wk8k804swgw4.jpg" width="109" height="337">
+            <h1 class="card-title pricing-card-title">$1999</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Lacquer finish</li>
+              <li>Three pure vintage ‘65 pickups</li>
+              <li>Vintage-correct hardwire</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary"><a href="/order">Buy today</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Telecaster</th>
+            <th style="width: 22%;">Les Paul</th>
+            <th style="width: 22%;">Stratocaster</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+{% endblock %}
