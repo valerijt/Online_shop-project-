@@ -9,20 +9,39 @@
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
+            <select>
+                <option selected value="Telecaster">Telecaster</option>
+                <option value="Stratocaster">Stratocaster</option>
+                <option value="Les Paul">Les Paul</option>
+            </select>
+        </p>
+        <p>
             {{ form.name.label }}<br>
-            {{ form.name(size=32) }}
+            {{ form.name(size=32) }}<br>
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         </p>
         <p>
             {{ form.email.label }}<br>
-            {{ form.email(size=32) }}
+            {{ form.email(size=32) }}<br>
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         </p>
         <p>
             {{ form.phone.label }}<br>
-            {{ form.phone(size=32) }}
+            {{ form.phone(size=32) }}<br>
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         </p>
         <p>
             {{ form.address.label }}<br>
-            {{ form.address(size=32) }}
+            {{ form.address(size=32) }}<br>
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         </p>
         <p>{{ form.submit() }}</p>
     </form>

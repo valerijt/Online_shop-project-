@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, redirect, flash
+from flask import render_template, redirect
 from app.forms import OrderForm
 
 
@@ -19,15 +19,14 @@ def support():
     return render_template('support.html')
 
 
-@app.route('/create')
-def create():
-    return render_template('create.html')
+@app.route('/validate', methods=['GET', 'POST'])
+def validate():
+    return render_template('validate.html')
 
 
 @app.route('/order', methods=['GET', 'POST'])
 def order():
     form = OrderForm()
     if form.validate_on_submit():
-        return redirect('/confirmation')
+        return redirect('/validate')
     return render_template('order.html', form=form)
-
