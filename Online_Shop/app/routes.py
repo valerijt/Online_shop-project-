@@ -28,19 +28,8 @@ def validate():
 
 @app.route('/order', methods=['GET', 'POST'])
 def order():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        phone = request.form['phone']
-        address = request.form['address']
+    form = OrderForm()
+    if form.validate_on_submit():
+        return redirect('/validate')
 
-        customer = Customer(name=name, email=email, phone=phone, address=address)
-
-        try:
-            db.session.add(customer)
-            db.session.commit()
-            return redirect('/validate')
-        except:
-            return redirect('/index')
-    else:
-        return render_template('/order')
+    return render_template('order.html', form=form)
