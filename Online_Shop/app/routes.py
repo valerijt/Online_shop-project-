@@ -1,6 +1,8 @@
 from app import app
-from flask import render_template, redirect
+from flask import render_template, redirect, request
 from app.forms import OrderForm
+from app.models import Customer
+from app.__init__ import db
 
 
 @app.route('/')
@@ -26,7 +28,19 @@ def validate():
 
 @app.route('/order', methods=['GET', 'POST'])
 def order():
-    form = OrderForm()
-    if form.validate_on_submit():
-        return redirect('/validate')
-    return render_template('order.html', form=form)
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['phone']
+        address = request.form['address']
+
+        customer = Customer(name=name, email=email, phone=phone, address=address)
+
+        try:
+            db.session.add(customer)
+            db.session.commit()
+            return redirect('/validate')
+        except:
+            return redirect('/index')
+    else:
+        return render_template('/order')
